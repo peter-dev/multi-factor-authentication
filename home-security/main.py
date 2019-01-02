@@ -14,7 +14,7 @@ import authentication
 from sense_hat import SenseHat
 sense = SenseHat()
 # raspberry pi is rotated, hdmi port is on the right side
-sense.set_rotation(270)
+sense.set_rotation(90)
 
 def displayAccessDenied():
 	O = (255, 255, 255) # White
