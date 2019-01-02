@@ -38,6 +38,10 @@ This guide will explain how to set up the Raspberry PI to run the multi-factor s
   ```
   KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0664", GROUP="plugdev"
   ```
+- Update `registerUsers()` method inside `db_data.py` script with your own key fob identifiers, example:
+  ```
+  dbUsers.insert({'keyId': '8-digit-numeric-code', 'accessCode': '4-digit-numeric-code', 'name': 'Your Name'})
+  ```
 
 ## Software requirements
 
@@ -53,7 +57,7 @@ This guide will explain how to set up the Raspberry PI to run the multi-factor s
 - Add `Notification` widget to the project
 - Add `Text Input` widget and call it "KeyPad (Mock)"
 - Select Virtual Pin 1 `V1` as output and set Character Limit to `4`
-- Your Blynk Auth Token will be required in the `blynk_keypad.py` script
+- Your Blynk Auth Token will be required in the `blynk_keypad.py` script [line 9]
 
 ### Wia
 
