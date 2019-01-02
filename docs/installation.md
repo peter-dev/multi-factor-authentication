@@ -34,6 +34,10 @@ This guide will explain how to set up the Raspberry PI to run the multi-factor s
 
 - I used the following Proximity Sensor ID Card Reader from [Amazon](https://www.amazon.co.uk/gp/product/B018TXQWRE/ref=oh_aui_search_detailpage?ie=UTF8&psc=1)
 - The reader is registered as HID device on the Raspberry Pi. 
+- Add the following line to dev rules in `/etc/udev/rules.d/` in order to access the input stream without sudo command
+  ```
+  KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0664", GROUP="plugdev"
+  ```
 
 ## Software requirements
 
