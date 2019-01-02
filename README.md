@@ -29,6 +29,4 @@
 
 ### Installation Steps:
 
-https://github.com/peter-dev/multi-factor-authentication/docs/installation.md
-
-
+https://github.com/peter-dev/multi-factor-authentication/blob/master/docs/installation.md
